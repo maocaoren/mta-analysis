@@ -19,11 +19,12 @@ import mta from 'mta-analysis';
 ## 相关代码
 
 ```
-// 初始化
+// 初始化,这是示例代码，应用的接入代码请到官网每个应用对应的“应用管理”进行拷贝
 mta.App.init({
-    "appID":"xxxxxxx",
-    "eventID":"xxxxxxx", // 高级功能-自定义事件统计ID，配置开通后在初始化处填写
-    "statPullDownFresh":true, // 使用分析-下来刷新次数/人数，必须先开通自定义事件，并配置了合法的eventID
+    "appID":"500013092",
+    "eventID":"500015824", // 高级功能-自定义事件统计ID，配置开通后在初始化处填写
+    "lauchOpts":options, //渠道分析,需在onLaunch方法传入options,如onLaunch:function(options){...}
+    "statPullDownFresh":true, // 使用分析-下拉刷新次数/人数，必须先开通自定义事件，并配置了合法的eventID
     "statShareApp":true, // 使用分析-分享次数/人数，必须先开通自定义事件，并配置了合法的eventID
     "statReachBottom":true // 使用分析-页面触底次数/人数，必须先开通自定义事件，并配置了合法的eventID
 });
@@ -37,4 +38,4 @@ mta.Event.stat("ico_search", {"query":"特斯拉"});
 ```
 
 
-更多文档说明，参考[官方文档](http://developer.qq.com/wiki/mta/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8E%A5%E5%85%A5/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8E%A5%E5%85%A5/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8E%A5%E5%85%A5.html)
+更多文档说明，参考[官方文档](http://docs.developer.qq.com/mta/fast_access/wechat.html)
